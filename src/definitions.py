@@ -1,4 +1,6 @@
-import random
+"""
+General definitions of types, constants, data set.
+"""
 from typing import Optional, Union
 from typing_extensions import TypeAlias
 
@@ -10,7 +12,6 @@ Gene: TypeAlias =  bool
 class Individual:
   def __init__(self, genes: list[Gene]) -> None:
     self.genome = genes
-
 
 # Dummy dataset.
 dataset: dict[str, list[int]] = {
@@ -24,17 +25,4 @@ dataset: dict[str, list[int]] = {
 # category or not).
 CATEGORIES: list[str] = list(dataset.keys())
 GENOME_LEN: int = len(CATEGORIES)
-
-
-# Fitness function - maximising the sum of selected categories.
-def fitness(individual: Individual) -> Result:
-  total: Result = 0
-  selected: bool = True
-  # Iterating over the genes of the individual and counting the
-  # number of genes that are on (categories chosen).
-  for i, gene in enumerate(individual.genome):
-    if gene is selected:
-      category: str = CATEGORIES[i]
-      total += sum(dataset[category])
-
-  return total
+POPULATION_SIZE: int = 20
