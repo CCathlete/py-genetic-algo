@@ -1,0 +1,128 @@
+name: ga-env
+channels:
+- conda-forge
+- https://repo.anaconda.com/pkgs/main
+- https://repo.anaconda.com/pkgs/r
+dependencies:
+- _libgcc_mutex
+- _openmp_mutex
+- bzip2
+- ca-certificates
+- expat
+- gdbm
+- ld_impl_linux-64
+- libexpat
+- libffi
+- libgcc
+- libgcc-ng
+- libgomp
+- liblzma
+- liblzma-devel
+- libmpdec
+- libsqlite
+- libstdcxx
+- libstdcxx-ng
+- libuuid
+- libxcb
+- libzlib
+- ncurses
+- openssl
+- pip
+- pthread-stubs
+- pypy
+- pypy3.9
+- python
+- python_abi
+- readline
+- setuptools
+- sqlite
+- tk
+- wheel
+- xorg-libx11
+- xorg-libxau
+- xorg-libxdmcp
+- xz
+- xz-gpl-tools
+- xz-tools
+- zlib
+- pip:
+  - attrs
+  - automat
+  - beautifulsoup4
+  - black
+  - boto3
+  - bs4
+  - certifi
+  - charset-normalizer
+  - click
+  - constantly
+  - cryptography
+  - cssselect
+  - defusedxml
+  - exceptiongroup
+  - filelock
+  - future
+  - h11
+  - hyperlink
+  - idna
+  - importlib-metadata
+  - incremental
+  - isort
+  - itemadapter
+  - itemloaders
+  - jinja2
+  - jmespath
+  - lxml
+  - markdown-it-py
+  - markupsafe
+  - mdformat
+  - mdurl
+  - mypy-boto3-builder
+  - mypy-extensions
+  - numpy
+  - outcome
+  - packaging
+  - pandas
+  - pandas-stubs
+  - parsel
+  - pathspec
+  - platformdirs
+  - protego
+  - pyasn1
+  - pyasn1-modules
+  - pyopenssl
+  - pyparsing
+  - pypydispatcher
+  - pysocks
+  - python-dateutil
+  - pytz
+  - queuelib
+  - requests
+  - requests-file
+  - s3transfer
+  - scrapy
+  - selenium
+  - service-identity
+  - six
+  - sniffio
+  - sortedcontainers
+  - soupsieve
+  - tldextract
+  - tomli
+  - trio
+  - trio-websocket
+  - twisted
+  - types-pytz
+  - types-requests
+  - types-selenium
+  - types-setuptools
+  - typing-extensions
+  - tzdata
+  - urllib3
+  - utils
+  - w3lib
+  - websocket-client
+  - wsproto
+  - zipp
+  - zope-interface
+prefix: /home/ccat/miniconda3/envs/ga-env
