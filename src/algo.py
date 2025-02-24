@@ -13,6 +13,6 @@ def fitness(individual: Individual) -> Result:
   for i, gene in enumerate(individual.genome):
     if gene is selected:
       category: str = CATEGORIES[i]
-      total += sum(dataset[category])
+      total += sum(DATASET[category])
 
   return total
