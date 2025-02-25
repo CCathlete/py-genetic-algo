@@ -23,6 +23,9 @@ def genetic_algorithm(
         Population: The evolved populatino after the specified number of generations.
     """
     for generation in range(generations):
+        if generation % 100 == 0:
+            print(f"Generation {generation}\n\n")
+
         children_pool: list[Individual] = []
 
         # Calculating the fitness score of each individual.

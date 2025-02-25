@@ -27,8 +27,11 @@ GENOME_LEN: int = len(CATEGORIES)
 POPULATION_SIZE: int = 20
 
 
+# We need at least 2 children currently since we currently we don't
+# have a condition that prevents the population from dying out and we
+# discard 50% of members each generation.
 constant_num_of_children: Callable[[], int] = lambda: int(2)
-random_num_of_children: Callable[[], int] = lambda: random.randint(0, 5)
+random_num_of_children: Callable[[], int] = lambda: random.randint(2, 5)
 
 # The method of deciding on the number of children is constant per version of the app.
 NUM_OF_CHILDREN_METHOD: Callable[[], int] = random_num_of_children
