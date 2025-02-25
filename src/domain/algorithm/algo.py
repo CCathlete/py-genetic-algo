@@ -35,12 +35,16 @@ def genetic_algorithm(
         # Sorting the population according to the fitness score.
         # Then, reducing the population according to selection logic.
         parent_pairs: list[tuple[Individual, Individual]] = (
-            selection.calculations.sort_and_pick_couples(population)
+            # selection.calculations.sort_and_pick_couples(population)
+            selection.calculations.tournament_selection(
+                population=population,
+                tournament_size=3,
+            )
         )
 
         # Getting the children from each couple.
         for parent1, parent2 in parent_pairs:
-            children: tuple[Individual, ...] = crossover.calculations.single_point(
+            children: tuple[Individual, ...] = crossover.calculations.two_points(
                 parent1, parent2
             )
             children_pool.extend(children)

@@ -31,3 +31,27 @@ def single_point(
     children: list[Individual] = [give_birth() for _ in range(num_of_children)]
 
     return tuple(children)
+
+
+def two_points(
+    parent1: Individual,
+    parent2: Individual,
+) -> tuple[Individual, Individual]:
+    """
+    Splits genome at two points.
+    """
+    num_of_children: int = NUM_OF_CHILDREN_METHOD()
+
+    def give_birth() -> Individual:
+        point1: int = random.randint(1, GENOME_LEN - 2)
+        point2: int = random.randint(1, GENOME_LEN - 2)
+        child: Individual = Individual(
+            parent1.genome[:point1]
+            + parent2.genome[point1:point2]
+            + parent1.genome[point2:]
+        )
+        return child
+
+    children: list[Individual] = [give_birth() for _ in range(num_of_children)]
+
+    return tuple(children)
