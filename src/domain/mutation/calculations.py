@@ -23,10 +23,10 @@ def affect_population(population: Population) -> None:
     """
     Chooses random population members and mutates them (in place).
     """
-    # 20 - 50% of the population might be affected.
+    # 50 - 80% of the population might be affected.
     num_of_affected: int = random.randint(
-        int(0.2 * POPULATION_SIZE),
         int(0.5 * POPULATION_SIZE),
+        int(0.8 * POPULATION_SIZE),
     )
 
     # Choosing random population members.
