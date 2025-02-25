@@ -13,6 +13,8 @@ def sort_and_pick_couples(
     """
     Gets an already evaluated population, sorts by fitness score and returns a list of couples from the most fit ones.
     """
+    pairs: list[tuple[Individual, Individual]] = []
+
     # Sorting the population by fitness score.
     population.individuals = sorted(
         population.individuals,
@@ -26,12 +28,20 @@ def sort_and_pick_couples(
     num_of_selected: int = (
         POPULATION_SIZE / 2 if even_population_size else (POPULATION_SIZE + 1) / 2
     )
-    num_of_pairs: int = num_of_selected / 2
+    # num_of_pairs: int = num_of_selected / 2
 
     # Keeping only the future parents.
     population.individuals = population.individuals[:num_of_selected]
 
-    # Returning a list of tuples of parents.
-    # TODO: Add num of children to reach initial pop size.
+    # Pairing parents. Initial len(mating_pool) = num_of_selected.
+    mating_pool: list[Individual] = population.individuals
+    while len(mating_pool) > 0:
+        parent1: Individual = random.choice(mating_pool)
+        mating_pool.remove(parent1)
+        parent2: Individual = random.choice(mating_pool)
+        mating_pool.remove(parent2)
 
-    return [tuple(random.choices(population=population.individuals, k=2))]
+        pairs.append((parent1, parent2))
+
+    # Returning a list of tuples of parents.
+    return pairs
