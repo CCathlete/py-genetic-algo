@@ -11,7 +11,8 @@ def sort_and_pick_couples(
     population: Population,
 ) -> list[tuple[Individual, Individual]]:
     """
-    Gets an already evaluated population, sorts by fitness score and returns a list of couples from the most fit ones.
+    Gets an already evaluated population, sorts by fitness score,
+    keeps only the top 50% and returns a list of random couples.
     """
     pairs: list[tuple[Individual, Individual]] = []
 
