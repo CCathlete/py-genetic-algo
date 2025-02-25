@@ -3,7 +3,7 @@ General definitions of types, constants, data set.
 """
 
 import random
-from typing import Optional, Union
+from typing import Union, Callable
 from typing_extensions import TypeAlias
 
 Result: TypeAlias = Union[int, float]
@@ -27,8 +27,8 @@ GENOME_LEN: int = len(CATEGORIES)
 POPULATION_SIZE: int = 20
 
 
-constant_num_of_children: function = lambda: int(2)
-random_num_of_children: function = lambda: random.randint(0, 5)
+constant_num_of_children: Callable[[], int] = lambda: int(2)
+random_num_of_children: Callable[[], int] = lambda: random.randint(0, 5)
 
 # The method of deciding on the number of children is constant per version of the app.
-NUM_OF_CHILDREN_METHOD: function = random_num_of_children
+NUM_OF_CHILDREN_METHOD: Callable[[], int] = random_num_of_children

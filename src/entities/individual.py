@@ -2,7 +2,7 @@
 Definition of oe individual inthe population.
 """
 
-from definitions import *
+from src.definitions import *
 
 
 class Individual:

@@ -3,15 +3,13 @@ Fitness function definition and implementation of the genetic
 algorithm.
 """
 
-import crossover.calculations
-from definitions import *
-from aggregators.population import *
-import fitness
-import mutation.calculations
-import selection
-import crossover
-import mutation
-import selection.calculations
+import src.domain.crossover.calculations
+from src.definitions import *
+from src.aggregators.population import *
+import src.domain.algorithm.fitness as fitness
+import src.domain.selection as selection
+import src.domain.crossover as crossover
+import src.domain.mutation as mutation
 
 
 def genetic_algorithm(
@@ -54,7 +52,5 @@ def genetic_algorithm(
 
         # Mutating a section of the population.
         mutation.calculations.affect_population(population)
-
-        print(f"Generation {generation}: Best Fitness = {max(population)}")
 
     return population

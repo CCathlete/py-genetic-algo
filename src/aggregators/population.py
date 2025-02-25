@@ -3,8 +3,8 @@ Initialising the population.
 """
 
 import random
-from definitions import *
-from entities.individual import Individual
+from src.definitions import *
+from src.entities.individual import Individual
 from dataclasses import dataclass
 
 

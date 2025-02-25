@@ -3,9 +3,9 @@ Various methods for processing the GA results.
 """
 
 from enum import Enum
-from aggregators.population import Population
-from entities.individual import Individual
-from definitions import *
+from src.aggregators.population import Population
+from src.entities.individual import Individual
+from src.definitions import *
 
 
 def decrypt_genome(ind: Individual) -> dict[str, bool]:
@@ -38,15 +38,15 @@ def bar_plot(population: Population) -> None:
     pass
 
 
-class Processing_method(Enum, function):
+class Processing_method(Enum):
     """
     Supports:\n
     print_for_each_individual,\n
     bar_plot
     """
 
-    PRINT: function = print_for_each_individual
-    BAR_PLOT: function = bar_plot
+    PRINT = print_for_each_individual
+    BAR_PLOT = bar_plot
 
 
 def execute(population: Population, method: Processing_method) -> None:
@@ -55,4 +55,4 @@ def execute(population: Population, method: Processing_method) -> None:
     method according to the configured value of PROCESSING_METHOD.
     """
 
-    method(population)
+    method.value(population)

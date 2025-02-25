@@ -2,8 +2,8 @@
 Fitness score calculations for each individual.
 """
 
-from definitions import *
-from entities.individual import Individual
+from src.definitions import *
+from src.entities.individual import Individual
 
 
 # Maximising the sum of selected categories.

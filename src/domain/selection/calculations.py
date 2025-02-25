@@ -3,8 +3,8 @@ Once the population is scored, we select the fittest
 individuals and randomly select parents from those.
 """
 
-from definitions import *
-from aggregators.population import *
+from src.definitions import *
+from src.aggregators.population import *
 
 
 def sort_and_pick_couples(
@@ -26,7 +26,7 @@ def sort_and_pick_couples(
     even_population_size: bool = POPULATION_SIZE % 2 == 0
 
     # Taking into account uneven population sizes.
-    num_of_selected: int = (
+    num_of_selected: int = int(
         POPULATION_SIZE / 2 if even_population_size else (POPULATION_SIZE + 1) / 2
     )
     # num_of_pairs: int = num_of_selected / 2

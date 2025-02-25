@@ -3,9 +3,9 @@ Methods for mutation of genes.
 """
 
 import random
-from definitions import *
-from entities.individual import Individual
-from aggregators.population import Population
+from src.definitions import *
+from src.entities.individual import Individual
+from src.aggregators.population import Population
 
 
 def flip_random_gene(ind: Individual) -> None:
@@ -16,7 +16,7 @@ def flip_random_gene(ind: Individual) -> None:
     ind.genome[index] = not ind.genome[index]
 
 
-MUTATION_METHOD: function = flip_random_gene
+MUTATION_METHOD: Callable[[Individual], None] = flip_random_gene
 
 
 def affect_population(population: Population) -> None:

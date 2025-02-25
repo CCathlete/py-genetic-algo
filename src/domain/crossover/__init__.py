@@ -1,1 +1,1 @@
-from calculations import *
+from .calculations import *
