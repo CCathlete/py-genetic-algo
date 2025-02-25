@@ -55,4 +55,4 @@ def execute(population: Population, method: Processing_method) -> None:
     method according to the configured value of PROCESSING_METHOD.
     """
 
-    method.value(population)
+    method(population)

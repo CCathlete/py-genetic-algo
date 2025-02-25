@@ -35,7 +35,7 @@ def sort_and_pick_couples(
     population.individuals = population.individuals[:num_of_selected]
 
     # Pairing parents. Initial len(mating_pool) = num_of_selected.
-    mating_pool: list[Individual] = population.individuals
+    mating_pool: list[Individual] = population.individuals.copy()
     while len(mating_pool) > 0:
         parent1: Individual = random.choice(mating_pool)
         mating_pool.remove(parent1)
