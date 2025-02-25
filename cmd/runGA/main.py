@@ -10,7 +10,7 @@ def run() -> None:
     print("Evolution in progress...\n")
     optimised_population: Population = genetic_algorithm(
         population=population,
-        generations=190000,
+        generations=19000,
     )
     process_results.execute(
         optimised_population,

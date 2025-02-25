@@ -30,7 +30,7 @@ def genetic_algorithm(
 
         # Calculating the fitness score of each individual.
         for individual in population.individuals:
-            individual.fitness_score = fitness.most_genes_max_in_each(individual)
+            individual.fitness_score = fitness.correlation_with_risk(individual)
 
         # Sorting the population according to the fitness score.
         # Then, reducing the population according to selection logic.
