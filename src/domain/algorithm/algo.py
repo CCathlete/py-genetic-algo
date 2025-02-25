@@ -32,7 +32,7 @@ def genetic_algorithm(
         # Sorting the population according to the fitness score.
         # Then, reducing the population according to selection logic.
         parent_pairs: list[tuple[Individual, Individual]] = (
-            selection.sort_and_pick_couples(population)
+            selection.calculations.sort_and_pick_couples(population)
         )
 
         # Getting the children from each couple.
