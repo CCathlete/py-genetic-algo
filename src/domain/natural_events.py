@@ -3,7 +3,7 @@ Selection, Crossover and Mutation.
 """
 
 from definitions import *
-from population import *
+from aggregators.population import *
 
 
 def select(population: Population) -> tuple[Individual, ...]:
