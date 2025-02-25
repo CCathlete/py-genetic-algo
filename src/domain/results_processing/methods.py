@@ -20,13 +20,17 @@ def print_for_each_individual(population: Population) -> None:
     Prints the fitness score for each individual.
     """
     for ind_number, individual in enumerate(population.individuals):
-        print(f"Individual {ind_number + 1}:")
-        print(f"{'-' * 20}")
-        print(f"Fitness score: {individual.fitness_score}")
-        print(f"{'-' * 20}")
-        print("Decrypted genome:")
-        print(f"{decrypt_genome(individual)}")
-        print(f"{'-' * 20}")
+        print(
+            f"Individual {ind_number + 1}:\n",
+            f"{'-' * 20}\n",
+            f"Fitness score:\n",
+            f"{individual.fitness_score}\n",
+            f"{'-' * 20}\n",
+            "Decrypted genome:\n",
+            f"{decrypt_genome(individual)}\n",
+            f"{'-' * 20}\n",
+            f"{'-' * 20}\n",
+        )
 
 
 def bar_plot(population: Population) -> None:
