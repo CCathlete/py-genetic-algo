@@ -1,128 +1,141 @@
 name: ga-env
 channels:
-- conda-forge
-- https://repo.anaconda.com/pkgs/main
-- https://repo.anaconda.com/pkgs/r
+  - conda-forge
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
 dependencies:
-- _libgcc_mutex
-- _openmp_mutex
-- bzip2
-- ca-certificates
-- expat
-- gdbm
-- ld_impl_linux-64
-- libexpat
-- libffi
-- libgcc
-- libgcc-ng
-- libgomp
-- liblzma
-- liblzma-devel
-- libmpdec
-- libsqlite
-- libstdcxx
-- libstdcxx-ng
-- libuuid
-- libxcb
-- libzlib
-- ncurses
-- openssl
-- pip
-- pthread-stubs
-- pypy
-- pypy3.9
-- python
-- python_abi
-- readline
-- setuptools
-- sqlite
-- tk
-- wheel
-- xorg-libx11
-- xorg-libxau
-- xorg-libxdmcp
-- xz
-- xz-gpl-tools
-- xz-tools
-- zlib
-- pip:
-  - attrs
-  - automat
-  - beautifulsoup4
-  - black
-  - boto3
-  - bs4
-  - certifi
-  - charset-normalizer
-  - click
-  - constantly
-  - cryptography
-  - cssselect
-  - defusedxml
-  - exceptiongroup
-  - filelock
-  - future
-  - h11
-  - hyperlink
-  - idna
-  - importlib-metadata
-  - incremental
-  - isort
-  - itemadapter
-  - itemloaders
-  - jinja2
-  - jmespath
-  - lxml
-  - markdown-it-py
-  - markupsafe
-  - mdformat
-  - mdurl
-  - mypy-boto3-builder
-  - mypy-extensions
-  - numpy
-  - outcome
-  - packaging
-  - pandas
-  - pandas-stubs
-  - parsel
-  - pathspec
-  - platformdirs
-  - protego
-  - pyasn1
-  - pyasn1-modules
-  - pyopenssl
-  - pyparsing
-  - pypydispatcher
-  - pysocks
-  - python-dateutil
-  - pytz
-  - queuelib
-  - requests
-  - requests-file
-  - s3transfer
-  - scrapy
-  - selenium
-  - service-identity
-  - six
-  - sniffio
-  - sortedcontainers
-  - soupsieve
-  - tldextract
-  - tomli
-  - trio
-  - trio-websocket
-  - twisted
-  - types-pytz
-  - types-requests
-  - types-selenium
-  - types-setuptools
-  - typing-extensions
-  - tzdata
-  - urllib3
-  - utils
-  - w3lib
-  - websocket-client
-  - wsproto
-  - zipp
-  - zope-interface
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=2_gnu
+  - bzip2=1.0.8=h4bc722e_7
+  - ca-certificates=2025.1.31=hbcca054_0
+  - expat=2.6.4=h5888daf_0
+  - gdbm=1.18=h0a1914f_2
+  - ld_impl_linux-64=2.43=h712a8e2_4
+  - libexpat=2.6.4=h5888daf_0
+  - libffi=3.4.6=h2dba641_0
+  - libgcc=14.2.0=h767d61c_2
+  - libgcc-ng=14.2.0=h69a702a_2
+  - libgomp=14.2.0=h767d61c_2
+  - liblzma=5.6.4=hb9d3cd8_0
+  - liblzma-devel=5.6.4=hb9d3cd8_0
+  - libmpdec=4.0.0=h4bc722e_0
+  - libsqlite=3.49.1=hee588c1_1
+  - libstdcxx=14.2.0=h8f9b012_2
+  - libstdcxx-ng=14.2.0=h4852527_2
+  - libuuid=2.38.1=h0b41bf4_0
+  - libxcb=1.17.0=h8a09558_0
+  - libzlib=1.3.1=hb9d3cd8_2
+  - ncurses=6.5=h2d0b736_3
+  - openssl=3.4.1=h7b32b05_0
+  - pip=25.0.1=pyh8b19718_0
+  - pthread-stubs=0.4=hb9d3cd8_1002
+  - pypy=7.3.15=1_pypy39
+  - pypy3.9=7.3.15=h9557127_1
+  - python=3.9.18=1_73_pypy
+  - python_abi=3.9=5_pypy39_pp73
+  - readline=8.2=h8c095d6_2
+  - setuptools=75.8.0=pyhff2d567_0
+  - sqlite=3.49.1=h9eae976_1
+  - tk=8.6.13=noxft_h4845f30_101
+  - wheel=0.45.1=pyhd8ed1ab_1
+  - xorg-libx11=1.8.11=h4f16b4b_0
+  - xorg-libxau=1.0.12=hb9d3cd8_0
+  - xorg-libxdmcp=1.1.5=hb9d3cd8_0
+  - xz=5.6.4=hbcc6ac9_0
+  - xz-gpl-tools=5.6.4=hbcc6ac9_0
+  - xz-tools=5.6.4=hb9d3cd8_0
+  - zlib=1.3.1=hb9d3cd8_2
+  - pip:
+      - altgraph==0.17.4
+      - attrs==25.1.0
+      - automat==24.8.1
+      - beautifulsoup4==4.13.3
+      - black==21.12b0
+      - boto3==1.36.26
+      - botocore==1.36.26
+      - bs4==0.0.2
+      - certifi==2025.1.31
+      - charset-normalizer==3.4.1
+      - click==8.1.8
+      - constantly==23.10.4
+      - contourpy==1.3.0
+      - cryptography==44.0.1
+      - cssselect==1.2.0
+      - cycler==0.12.1
+      - defusedxml==0.7.1
+      - exceptiongroup==1.2.2
+      - filelock==3.17.0
+      - fonttools==4.56.0
+      - future==1.0.0
+      - h11==0.14.0
+      - hyperlink==21.0.0
+      - idna==3.10
+      - importlib-metadata==8.6.1
+      - importlib-resources==6.5.2
+      - incremental==24.7.2
+      - isort==5.13.2
+      - itemadapter==0.11.0
+      - itemloaders==1.3.2
+      - jinja2==3.1.5
+      - jmespath==1.0.1
+      - kiwisolver==1.4.7
+      - lxml==5.3.1
+      - markdown-it-py==3.0.0
+      - markupsafe==3.0.2
+      - matplotlib==3.9.4
+      - mdformat==0.7.22
+      - mdurl==0.1.2
+      - mypy-boto3-builder==5.5.0
+      - mypy-extensions==1.0.0
+      - numpy==2.0.2
+      - outcome==1.3.0.post0
+      - packaging==24.2
+      - pandas==2.2.3
+      - pandas-stubs==2.2.2.240807
+      - parsel==1.10.0
+      - pathspec==0.12.1
+      - pillow==11.1.0
+      - platformdirs==4.3.6
+      - protego==0.4.0
+      - pyasn1==0.6.1
+      - pyasn1-modules==0.4.1
+      - pyinstaller==6.12.0
+      - pyinstaller-hooks-contrib==2025.1
+      - pyopenssl==25.0.0
+      - pyparsing==2.4.7
+      - pypydispatcher==2.1.2
+      - pysocks==1.7.1
+      - python-dateutil==2.9.0.post0
+      - pytz==2025.1
+      - queuelib==1.7.0
+      - requests==2.32.3
+      - requests-file==2.1.0
+      - s3transfer==0.11.2
+      - scrapy==2.12.0
+      - seaborn==0.13.2
+      - selenium==4.29.0
+      - service-identity==24.2.0
+      - six==1.17.0
+      - sniffio==1.3.1
+      - sortedcontainers==2.4.0
+      - soupsieve==2.6
+      - tldextract==5.1.3
+      - tomli==1.2.3
+      - trio==0.29.0
+      - trio-websocket==0.12.1
+      - twisted==24.11.0
+      - types-pytz==2025.1.0.20250204
+      - types-requests==2.31.0.6
+      - types-selenium==3.141.9
+      - types-setuptools==75.8.0.20250210
+      - types-urllib3==1.26.25.14
+      - typing-extensions==4.12.2
+      - tzdata==2025.1
+      - urllib3==1.26.20
+      - utils==1.0.2
+      - w3lib==2.3.1
+      - websocket-client==1.8.0
+      - wsproto==1.2.0
+      - zipp==3.21.0
+      - zope-interface==7.2
 prefix: /home/ccat/miniconda3/envs/ga-env

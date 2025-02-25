@@ -6,6 +6,10 @@ from enum import Enum
 from src.aggregators.population import Population
 from src.entities.individual import Individual
 from src.definitions import *
+from collections import Counter
+from matplotlib import pyplot as plt
+import seaborn as sns
+import pandas as pd
 
 
 def decrypt_genome(ind: Individual) -> dict[str, bool]:
@@ -33,13 +37,16 @@ def print_for_each_individual(population: Population) -> None:
         )
 
 
-def bar_plot(population: Population) -> None:
+def bar_plot(
+    population: Population,
+    save_path: str = "gene_frequencies.png",
+) -> None:
     """
     Gets a population and plots a bar plot of gene expression levels
     (enrichment).\n
-    TODO
     """
-    pass
+
+    gene_counter:
 
 
 class Processing_method(Enum):
