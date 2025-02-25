@@ -1,6 +1,6 @@
 from src.domain.algorithm.algo import genetic_algorithm
 from src.aggregators.population import Population
-from src.domain.results_processing.methods import *
+import src.domain.results_processing.methods as process_results
 
 
 def run() -> None:
@@ -12,7 +12,10 @@ def run() -> None:
         population=population,
         generations=100,
     )
-    PROCESSING_METHOD = print_for_each_individual
+    process_results.execute(
+        optimised_population,
+        process_results.Processing_method.PRINT,
+    )
 
 
 if __name__ == "__main__":
