@@ -14,7 +14,7 @@ def run() -> None:
     )
     process_results.execute(
         optimised_population,
-        process_results.Processing_method.PRINT,
+        process_results.Processing_method.BAR_PLOT,
     )
 
 

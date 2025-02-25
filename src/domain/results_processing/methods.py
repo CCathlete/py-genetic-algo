@@ -46,7 +46,51 @@ def bar_plot(
     (enrichment).\n
     """
 
-    gene_counter:
+    # A type of dict with the categories as keys and their frequency
+    # as values.
+    # Has the ability count frequencies from an iterable.
+    # TODO: A regular dict might suffice.
+    gene_counts: Counter = Counter()
+
+    for ind in population.individuals:
+        # Tuples of (category, gene) in the individual's decrypted
+        # genome.
+        for category, gene in decrypt_genome(ind).items():
+            if gene:  # If the category is selected.
+                gene_counts[category] += 1
+
+    # Normalisation = conversion to percentages.
+    frequencies: dict[str, float] = {
+        category: (count / POPULATION_SIZE) * 100
+        for category, count in gene_counts.items()
+    }
+
+    # Conversion to DataFrame for plotting with seaborn.
+    df_freq: pd.DataFrame = pd.DataFrame(
+        frequencies.items(),
+        columns=["Category", "Selection Frequency (%)"],
+    )
+
+    # Plotting.
+    plt.figure(figsize=(10, 6))
+    sns.barplot(
+        x="Category",  # x and y axes need to be from the dataframe.
+        y="Selection Frequency (%)",
+        data=df_freq,
+        pallete="viridis",
+    )
+    plt.xticks(rotation=45)
+    plt.xlabel("Category")
+    plt.ylabel("Selection Frequency (%)")
+    plt.title("Category selection frequencies in the final population")
+    # Zooming on the right part of the axis (needs to fit
+    # percentages).
+    plt.ylim(0, 100)
+    plt.tight_layout()
+
+    # Saving the plot.
+    plt.savefig(save_path)
+    print(f"Plot saved to {save_path}")
 
 
 class Processing_method(Enum):
