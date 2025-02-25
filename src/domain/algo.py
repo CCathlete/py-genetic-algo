@@ -19,7 +19,9 @@ def genetic_algorithm(
         Population: The evolved populatino after the specified number of generations.
     """
     for generation in range(generations):
+        # Caltulating the fitness score of each individual.
         for individual in population.individuals:
             individual.fitness_score = fitness.most_genes_max_in_each(individual)
+        # Sorting the population according to the fitness score.
 
     return population
