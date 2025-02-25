@@ -24,7 +24,7 @@ def genetic_algorithm(
     Returns:
         Population: The evolved populatino after the specified number of generations.
     """
-    for _ in range(generations):
+    for generation in range(generations):
         children_pool: list[Individual] = []
 
         # Calculating the fitness score of each individual.
@@ -54,5 +54,7 @@ def genetic_algorithm(
 
         # Mutating a section of the population.
         mutation.calculations.affect_population(population)
+
+        print(f"Generation {generation}: Best Fitness = {max(population)}")
 
     return population
