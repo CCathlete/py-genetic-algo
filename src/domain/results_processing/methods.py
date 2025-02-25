@@ -77,7 +77,7 @@ def bar_plot(
         x="Category",  # x and y axes need to be from the dataframe.
         y="Selection Frequency (%)",
         data=df_freq,
-        pallete="viridis",
+        palette="viridis",
     )
     plt.xticks(rotation=45)
     plt.xlabel("Category")
