@@ -20,7 +20,7 @@ def genetic_algorithm(
     Implementation of simulated evolution.
 
     Returns:
-        Population: The evolved populatino after the specified number of generations.
+        Population: The evolved population after the specified number of generations.
     """
     for generation in range(generations):
         if generation % 100 == 0:
